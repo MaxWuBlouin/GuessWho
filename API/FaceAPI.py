@@ -135,3 +135,5 @@ token = getToken()
 for image in os.listdir(START_DIRECTORY):
     
     uploadAndGet(image)
+
+print("done!")
