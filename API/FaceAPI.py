@@ -64,7 +64,7 @@ def uploadImage(imageName):
 
 # Download an image from URL
 def downloadImage(imageURL, targetRelativePath):
-    with open(targetRelativePath, "wb") as handle:
+    with open(PROJECT_PATH + targetRelativePath, "wb") as handle:
         response = requests.get(imageURL, stream=True)
 
         if not response.ok:
@@ -103,7 +103,6 @@ def howManyFaces(imageName):
 def getFace(imageURL, targetRelativePath, index):
     
     newImageURL = imageURL + "?" + CROP_FACE + "&" + FACE_INDEX + str(index) + "&" + SQUARE_RATIO + "&" + SCALE_SIZE + "&" + "&crop.confidence=0.3"
-    print(newImageURL)
 
     downloadImage(newImageURL, targetRelativePath)
 
