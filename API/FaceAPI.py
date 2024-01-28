@@ -4,13 +4,13 @@ import json
 import os
 
 # Redefine this after download
-PROJECT_PATH = "/Users/lisa/VSCodeProjects/GuessWho/"
+PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3]
 
 #Directory names
 START_DIRECTORY = PROJECT_PATH + "IMAGE_INPUT/"
 UPLOAD_DIRECTORY = "/Faces/"
 URL_PATH = "https://maxwublouin.sirv.com/Faces/"
-DESTINATION_PATH = "IMAGE_OUTPUT/"
+DESTINATION_PATH = "/HTML_SITE/IMAGE_OUTPUT/"
 
 # URL extension names
 SQUARE_RATIO = "crop.aspectratio=1:1"

@@ -1,11 +1,38 @@
 # Import modules
 import os
 
-PROJECT_PATH = "/Users/lisa/VSCodeProjects/GuessWho/"
+PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3]
 
 BLANK_NAME = "blank.jpg"
 BLANK_PATH = PROJECT_PATH + "API/" + BLANK_NAME
-PATH_DESTINATION = PROJECT_PATH + "IMAGE_OUTPUT/"
+PATH_DESTINATION = PROJECT_PATH + "/HTML_SITE/IMAGE_OUTPUT/"
+
+BAD_DS = ".DS_Store"
+
+try:
+    os.remove(PROJECT_PATH + BAD_DS)
+except OSError:
+    pass
+
+try:
+    os.remove(PROJECT_PATH + "API/" + BAD_DS)
+except OSError:
+    pass
+
+try:
+    os.remove(PROJECT_PATH + "HTML_SITE/" + BAD_DS)
+except OSError:
+    pass
+
+try:
+    os.remove(PROJECT_PATH + "HTML_SITE/" + "IMAGE_OUTPUT/" + BAD_DS)
+except OSError:
+    pass
+
+try:
+    os.remove(PROJECT_PATH + "IMAGE_INPUT/" + BAD_DS)
+except OSError:
+    pass
 
 for i in range(25):
 
