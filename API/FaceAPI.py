@@ -5,7 +5,7 @@ import os
 import Cleanup
 
 # Redefine this after download
-PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3]
+PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3].replace("\\","/")
 
 #Directory names
 START_DIRECTORY = PROJECT_PATH + "IMAGE_INPUT/"

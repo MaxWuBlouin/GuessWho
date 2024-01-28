@@ -4,12 +4,17 @@ import os
 def cleanup():
 
     PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3]
-
+    
     BLANK_NAME = "blank.jpg"
     BLANK_PATH = PROJECT_PATH + "API/" + BLANK_NAME
     PATH_DESTINATION = PROJECT_PATH + "HTML_SITE/IMAGE_OUTPUT/"
 
     BAD_DS = ".DS_Store"
+
+    if os.name == 'nt':  # Windows
+        os_cmd = 'copy '
+    else:  # Unix/Linux
+        os_cmd = 'cp '
 
     try:
         os.remove(PROJECT_PATH + BAD_DS)
@@ -38,4 +43,4 @@ def cleanup():
 
     for i in range(25):
 
-        os.system('cp ' + BLANK_PATH + " " + PATH_DESTINATION + str(i // 5 + 1) + "x" + str(i % 5 + 1) + ".jpg")
+        os.system(os_cmd + BLANK_PATH + " " + PATH_DESTINATION + str(i // 5 + 1) + "x" + str(i % 5 + 1) + ".jpg")
