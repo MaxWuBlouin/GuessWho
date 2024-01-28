@@ -12,7 +12,7 @@ START_DIRECTORY = PROJECT_PATH + "IMAGE_INPUT/"
 UPLOAD_DIRECTORY = "/Faces/"
 URL_PATH = "https://maxwublouin.sirv.com/Faces/"
 DESTINATION_PATH = "HTML_SITE/IMAGE_OUTPUT/"
-
+print(START_DIRECTORY)
 # URL extension names
 SQUARE_RATIO = "crop.aspectratio=1:1"
 SCALE_SIZE = "ch=300"
@@ -25,7 +25,7 @@ picCount = [0]
 # Get token
 def getToken():
     url = 'https://api.sirv.com/v2/token'
-
+    print("Token")
     payload = {
       'clientId': 'Za363g1RB7ATSj6dGzy4Z0Jz5iV',
       'clientSecret': 'xrPg4gT+9/dEEj/Tqm1wnX+IQvplSvxRkSPwvYQvF7RfbO2L7ltvZ23RT4f4MKaMhBV09HT7p7ZTeFPsK+1VNA=='
