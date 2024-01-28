@@ -2,6 +2,7 @@
 import requests
 import json
 import os
+import Cleanup
 
 # Redefine this after download
 PROJECT_PATH = os.path.dirname(os.path.realpath(__file__))[:-3]
@@ -131,6 +132,8 @@ def uploadAndGet(imageName):
 
 # Test functions
 token = getToken()
+
+Cleanup.cleanup()
 
 for image in os.listdir(START_DIRECTORY):
     
